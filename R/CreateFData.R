@@ -31,7 +31,7 @@ CreateFData <- function(species,number,preciselyCounted,distance,sample,subSampl
 
   data2 <- matrix(NA,0,ncol(data))
   vSubSample <- levels(data$subSample)
-  message <- "Hardly working "
+  print("Hardly working ")
   for (i in vSubSample)
   {
     dataSubSample <- data[order(data$order),]
@@ -43,7 +43,7 @@ CreateFData <- function(species,number,preciselyCounted,distance,sample,subSampl
     dataSubSample$replicateNumber <- NA
     dataSubSample$replicateNumber[1] <-  replicateNumber
 
-    print(message)
+
     cat(".")
 
     for (j in 2:nrow(dataSubSample))
