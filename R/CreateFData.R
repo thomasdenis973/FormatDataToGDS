@@ -22,10 +22,10 @@ CreateFData <- function(species,number,preciselyCounted,distance,sample,subSampl
   data <- gdata::drop.levels(data)
 
   if(!is.data.frame(data)){
-    stop("L'objet data doit être un data.frame")
+    stop("L'objet data doit etre un data.frame")
   }
   if(!is.numeric(samplingEffort)){
-    stop("L'objet samplingEffort doit être numeric")
+    stop("L'objet samplingEffort doit etre numeric")
   }
 
 

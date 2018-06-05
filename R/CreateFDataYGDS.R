@@ -30,13 +30,13 @@ CreateFDataYGDS <- function(data,siteCovs=NULL,samplingEffort,nbReplicat=12, str
                            ,groupNumber =TRUE,naRmNumber=FALSE,naRmDistance=FALSE,missingValuesNumber="mean",missingValuesDistance="mean",...){
 
   if(length(levels(data$sample)) != length(colnames(samplingEffort))){
-    stop("le nom des sample de data et samplingEffort ne sont pas de la même longueur")
+    stop("le nom des sample de data et samplingEffort ne sont pas de la meme longueur")
   }
   if(!all(levels(data$sample) == colnames(samplingEffort))){
     stop("le nom des sample de data et samplingEffort ne correspondent pas")
   }
   if(!species %in% data$species){
-    stop("species n'est pas présents dans data$species")
+    stop("La species choisie n'est pas presents dans la variable species de data")
   }
 
   ### intervalles de distance

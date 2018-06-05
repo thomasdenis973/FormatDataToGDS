@@ -19,5 +19,5 @@
 #'   when }
 #'   ...
 #' }
-#' @source French Guianan ONCFS / Cécile Richard-Hansen
+#' @source French Guianan ONCFS / Cecile Richard-Hansen
 "ONCFSData"
