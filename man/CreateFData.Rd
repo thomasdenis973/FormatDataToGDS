@@ -25,11 +25,21 @@ CreateFData(species, number, preciselyCounted, distance, sample, subSample,
 \item{samplingEffort}{A vector of sampling effort for each replicate: number of m walked by the observer for the replicat}
 }
 \value{
-Return a FData object: data.frame object with formated column names.
+Return a FData object: Data Frame object with formated column names.
 Replicate numbers are given according to sampling effort. Replicate numbers are ordered acoording to sampling effort.
 First replicate numbers have the highest sampling effort whereas the lastest are the smallest.
 Use CalculateSamplingEffort function to see sampling effort values per replicate.
 }
 \description{
 Create FData object by formatting dataframe and adding replicate number according to samping effort.
+}
+\examples{
+data(ONCFSData)
+ONCFSData$order <- paste(ONCFSData$date,ONCFSData$sens,sep="_")
+FData <- CreateFData(species = ONCFSData$espece, number = ONCFSData$nombre,
+preciselyCounted = ONCFSData$precisementCompte,
+distance = ONCFSData$distance, sample = ONCFSData$site,
+subSample = ONCFSData$layon, order = ONCFSData$order,
+samplingEffort = ONCFSData$longueurLayon
+)
 }

@@ -1,4 +1,4 @@
-#' Create FData object by formatting dataframe and adding replicate number according to samping effort.
+#' Create FData object by formatting Data Frame and adding replicate number according to samping effort.
 #'
 #' @param species A vector of species name.
 #' @param number A vector of number of observed individuals.
@@ -9,13 +9,23 @@
 #' @param order A vector using to define replicates number.
 #' @param samplingEffort A vector of sampling effort for each replicate: number of m walked by the observer for the replicat
 #'
-#' @return Return a FData object: data.frame object with formated column names.
+#' @return Return a FData object: Data Frame object with formated column names.
 #' Replicate numbers are given according to sampling effort. Replicate numbers are ordered acoording to sampling effort.
 #' First replicate numbers have the highest sampling effort whereas the lastest are the smallest.
 #' Use CalculateSamplingEffort function to see sampling effort values per replicate.
-#' @export
+#' @examples
+#' data(ONCFSData)
 #'
-
+#' ONCFSData$order <- paste(ONCFSData$date,ONCFSData$sens,sep="_")
+#'
+#' FData <- CreateFData(species = ONCFSData$espece, number = ONCFSData$nombre,
+#' preciselyCounted = ONCFSData$precisementCompte,
+#' distance = ONCFSData$distance, sample = ONCFSData$site,
+#' subSample = ONCFSData$layon, order = ONCFSData$order,
+#' samplingEffort = ONCFSData$longueurLayon
+#' )
+#'
+#' @export
 CreateFData <- function(species,number,preciselyCounted,distance,sample,subSample,order,samplingEffort){
 
   data <- data.frame(species=species,number=number,preciselyCounted=preciselyCounted,distance=distance,sample=sample,subSample=subSample,order=order,samplingEffort=samplingEffort)
@@ -28,6 +38,17 @@ CreateFData <- function(species,number,preciselyCounted,distance,sample,subSampl
     stop("L'objet samplingEffort doit etre numeric")
   }
 
+  if(c("") %in% levels(data$sample)){
+    stop("Un sample n'est pas renseigne")
+  }
+
+  if(c("") %in% levels(data$subSample)){
+    stop("Un subsample n'est pas renseigne")
+  }
+
+  if(c("") %in% levels(data$order)){
+    stop("Un order n'est pas renseigne")
+  }
 
   data2 <- matrix(NA,0,ncol(data))
   vSubSample <- levels(data$subSample)
@@ -46,6 +67,8 @@ CreateFData <- function(species,number,preciselyCounted,distance,sample,subSampl
 
     cat(".")
 
+    if(nrow(dataSubSample) > 1){
+
     for (j in 2:nrow(dataSubSample))
     {
 
@@ -54,6 +77,7 @@ CreateFData <- function(species,number,preciselyCounted,distance,sample,subSampl
       dataSubSample$replicateNumber[j] <- replicateNumber
 
 
+    }
     }
     data2 <- rbind(data2,dataSubSample)
   }
