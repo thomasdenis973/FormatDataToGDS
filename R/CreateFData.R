@@ -13,18 +13,6 @@
 #' Replicate numbers are given according to sampling effort. Replicate numbers are ordered acoording to sampling effort.
 #' First replicate numbers have the highest sampling effort whereas the lastest are the smallest.
 #' Use CalculateSamplingEffort function to see sampling effort values per replicate.
-#' @examples
-#' data(ONCFSData)
-#'
-#' ONCFSData$order <- paste(ONCFSData$date,ONCFSData$sens,sep="_")
-#'
-#' FData <- CreateFData(species = ONCFSData$espece, number = ONCFSData$nombre,
-#' preciselyCounted = ONCFSData$precisementCompte,
-#' distance = ONCFSData$distance, sample = ONCFSData$site,
-#' subSample = ONCFSData$layon, order = ONCFSData$order,
-#' samplingEffort = ONCFSData$longueurLayon
-#' )
-#'
 #' @export
 CreateFData <- function(species,number,preciselyCounted,distance,sample,subSample,order,samplingEffort){
 
