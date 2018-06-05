@@ -20,7 +20,7 @@
   ...
 }}
 \source{
-French Guianan ONCFS / Cecile Richard-Hansen
+French Guianan ONCFS Cecile Richard-Hansen
 }
 \usage{
 ONCFSData

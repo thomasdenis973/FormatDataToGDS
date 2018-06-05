@@ -42,6 +42,8 @@ All values of 'number' variable of FData object are replaced by 1, including NA.
 \item{missingValuesNumber}{Either method "mean" or "random". See details. Default value is "mean".}
 
 \item{missingValuesDistance}{Either method "mean" or "random". See details. Default value is "mean".}
+
+\item{...}{other parameters of the unmarkedFrameGDS function(unmarked package)}
 }
 \value{
 Return a list with a FData object, a array with observations,

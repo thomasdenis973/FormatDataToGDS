@@ -9,7 +9,7 @@ PlotObservationPerDistanceClass(data, ...)
 \arguments{
 \item{data}{A FDataYGDS object created by CreateFDataYGDS function.}
 
-\item{...}{}
+\item{...}{other parameters of the ggplot function (ggplot2 package)}
 }
 \value{
 Return a plot of observation number (in y) by distance class (in x).

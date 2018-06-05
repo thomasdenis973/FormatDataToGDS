@@ -5,10 +5,12 @@
 \title{Represent relatioship between IKA (i.e., Encounter rate, 10km walked length) and
 estimated density.}
 \usage{
-PlotIkaDensity(data)
+PlotIkaDensity(data, ...)
 }
 \arguments{
 \item{data}{A FDataYGDS object created by CreateFDataYGDS function.}
+
+\item{...}{other parameters of the ggplot function (ggplot2 package)}
 }
 \value{
 Return a plot of estimated density (in x) and IKA (in x).

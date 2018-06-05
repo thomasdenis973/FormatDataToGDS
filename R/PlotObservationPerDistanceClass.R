@@ -1,13 +1,13 @@
 #' Represent observation number by distance class.
 #'
 #' @param data A FDataYGDS object created by CreateFDataYGDS function.
-#' @param ...
+#' @param ... other parameters of the ggplot function (ggplot2 package)
 #'
 #' @return Return a plot of observation number (in y) by distance class (in x).
 #' @export
 #'
 #' @examples In progress
-PlotObservationPerDistanceClass <- function(data,...){
+PlotObservationPerDistanceClass <- function(data, ...){
 
   distanceClass <- sapply(1:(length(data$FrameGDS@dist.breaks)-1),function(x) paste(data$FrameGDS@dist.breaks[x],"-",data$FrameGDS@dist.breaks[x+1],sep=""))
 

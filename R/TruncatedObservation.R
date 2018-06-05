@@ -8,5 +8,5 @@
 #' @examples In progress
 TruncatedObservation <- function(data){
 
-  return(sapply(unstack(data$FData,number~sample),sum,na.rm=TRUE) - rowSums(data$y))
+  return(sapply(utils::unstack(data$FData,number~sample),sum,na.rm=TRUE) - rowSums(data$y))
 }

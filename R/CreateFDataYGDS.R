@@ -18,6 +18,7 @@
 #' @param naRmDistance Logical. If TRUE, observations which are not distance values (NA) are removed. Default value is FALSE.
 #' @param missingValuesNumber Either method "mean" or "random". See details. Default value is "mean".
 #' @param missingValuesDistance Either method "mean" or "random". See details. Default value is "mean".
+#' @param ... other parameters of the unmarkedFrameGDS function(unmarked package)
 #'
 #' @details Method "mean" replaces a NA value by the mean value of the sample.
 #' Method "random" replaces a NA value by a value drawn randomly from the sample.
@@ -26,8 +27,8 @@
 #' @export
 #'
 #' @examples In progress
-CreateFDataYGDS <- function(data,siteCovs=NULL,samplingEffort,nbReplicat=12, stripWidth=80,DistanceClass=5,unitsIn="m",survey="line",species="Cebus"
-                           ,groupNumber =TRUE,naRmNumber=FALSE,naRmDistance=FALSE,missingValuesNumber="mean",missingValuesDistance="mean",...){
+CreateFDataYGDS <- function(data, siteCovs=NULL, samplingEffort, nbReplicat=12, stripWidth=80, DistanceClass=5, unitsIn="m",survey="line", species="Cebus"
+                           , groupNumber =TRUE, naRmNumber=FALSE, naRmDistance=FALSE, missingValuesNumber="mean", missingValuesDistance="mean", ...){
 
   if(length(levels(data$sample)) != length(colnames(samplingEffort))){
     stop("le nom des sample de data et samplingEffort ne sont pas de la meme longueur")
