@@ -17,6 +17,3 @@ Return a plot with the sampling effort in y and the sample number in x. Lables a
 \description{
 Represent total sampling effort according to sample number.
 }
-\examples{
-In progress
-}

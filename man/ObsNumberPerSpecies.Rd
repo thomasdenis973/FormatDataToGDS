@@ -15,6 +15,3 @@ return a vector with observation number per species.
 \description{
 Calculate observation number per species.
 }
-\examples{
-In progress
-}

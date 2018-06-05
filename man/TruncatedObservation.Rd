@@ -15,6 +15,3 @@ Return the number of truncated observation per sample.
 \description{
 Calculate the number of truncated observation per sample.
 }
-\examples{
-In progress
-}

@@ -15,6 +15,3 @@ return a vector with the replicate number per subsample
 \description{
 Give the replicate number per subsample
 }
-\examples{
-In progess
-}

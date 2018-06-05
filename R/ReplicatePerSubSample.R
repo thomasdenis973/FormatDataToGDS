@@ -5,8 +5,8 @@
 #' @return return a vector with the replicate number per subsample
 #' @export
 #'
-#' @examples In progess
+
 ReplicatePerSubSample <- function(data){
-  return(unlist(lapply(sapply(unstack(data, replicateNumber~subSample), unique),length)))
+  return(unlist(lapply(sapply(utils::unstack(data, data$replicateNumber~data$subSample), unique),length)))
 }
 

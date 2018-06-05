@@ -56,6 +56,3 @@ Create a FDataYGDS object to calculate IKA (Encounter Rate),and estimate abundan
 Method "mean" replaces a NA value by the mean value of the sample.
 Method "random" replaces a NA value by a value drawn randomly from the sample.
 }
-\examples{
-In progress
-}

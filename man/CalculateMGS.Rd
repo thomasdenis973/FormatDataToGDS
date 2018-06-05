@@ -24,6 +24,3 @@ return a vector of mean group size per sample.
 \description{
 Calculate the mean group size per sample.
 }
-\examples{
-In progress
-}

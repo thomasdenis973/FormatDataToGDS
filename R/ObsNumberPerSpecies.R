@@ -5,10 +5,10 @@
 #' @return return a vector with observation number per species.
 #' @export
 #'
-#' @examples In progress
+
 ObsNumberPerSpecies <- function(data){
   vSpeciesName <- unlist(lapply(levels(data$species),function(i) {
-    length(utils::unstack(data,number~species)[[i]])})
+    length(utils::unstack(data,data$number~data$species)[[i]])})
   )
   names(vSpeciesName) <- levels(data$species)
   return(vSpeciesName)

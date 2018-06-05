@@ -17,6 +17,3 @@ Return a plot of observation number (in y) by distance class (in x).
 \description{
 Represent observation number by distance class.
 }
-\examples{
-In progress
-}

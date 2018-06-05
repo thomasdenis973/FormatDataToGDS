@@ -15,6 +15,3 @@ Return data.frame object with sampling effort of sample for each replicate
 \description{
 Calculate sampling effort of sample for each replicate
 }
-\examples{
-In progress
-}

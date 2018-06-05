@@ -5,7 +5,7 @@
 #' @return Return data.frame object with sampling effort of sample for each replicate
 #' @export
 #'
-#' @examples In progress
+
 CalculateSamplingEffort <- function(data)
 {
   replicateNumber <-  max(data$replicateNumber)

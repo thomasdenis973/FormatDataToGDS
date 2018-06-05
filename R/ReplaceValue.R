@@ -8,7 +8,7 @@
 #' @return Return a vector completed.
 #' @export
 #'
-#' @examples In progress
+
 ReplaceValue <- function(data,colName,method){
 
   vector <-  data[,colName]

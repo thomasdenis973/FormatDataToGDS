@@ -20,6 +20,3 @@ Return a vector completed.
 \description{
 Replace NA values
 }
-\examples{
-In progress
-}

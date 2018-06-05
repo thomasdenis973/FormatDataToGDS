@@ -1,13 +1,10 @@
 Package: FormatDataToGDS
 Title: Format Data To gdistsamp function
 Version: 0.0.0.9000
-Authors@R: person("Thomas", "Denis", email = "thomas.denis@ecofog.gf", role = c("aut", "cre"))
-Description: Format data to estimate abundance using gdistsamp function (package unmarked, Chandler et al, 2011)
+Authors@R: person("Thomas", "Denis", email = "thomas.denis@ecofog.gf", role = "cre")
+Description: Format data to estimate abundance using gdistsamp function(package unmarked, Chandler et al, 2011).
 Depends: R (>= 3.4.4)
-Imports:
-    gdata,
-    ggplot2,
-    unmarked
+Imports: gdata, ggplot2, unmarked
 License: GNU General Public License
 Encoding: UTF-8
 LazyData: true

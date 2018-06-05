@@ -7,10 +7,10 @@
 #' @return Return a plot of estimated density (in x) and IKA (in x).
 #' @export
 #'
-#' @examples In progress
+
 PlotIkaDensity <- function(data, ...){
-  df<-base::data.frame(IKA=data$IKA,Density=data$Density)
-  p <- ggplot2::ggplot(data=df, ggplot2::aes(x=IKA, y=Density)) +
+  df <- data.frame(IKA=data$IKA,Density=data$Density)
+  p <- ggplot2::ggplot(data=df, ggplot2::aes(x=df$IKA, y=df$Density)) +
     ggplot2::geom_point()
   return(p)
 }

@@ -10,7 +10,7 @@
 #' @return return a vector of mean group size per sample.
 #' @export
 #'
-#' @examples In progress
+
 CalculateMGS <- function(data,species,threshold,sampleName,preciselyCountedValue){
   vector <- rep(NA,length(sampleName)) ###
   data <- data[data$species == species,]

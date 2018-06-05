@@ -7,7 +7,7 @@
 #' @return Return a vector of species names to replace species variable of dataframe created by CreateFData function
 #' @export
 #'
-#' @examples In progress
+
 ReplaceSpeciesName <- function(speciesNames,taxonReplacement,speciesVector){
   return(
     as.factor(

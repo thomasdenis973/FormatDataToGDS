@@ -26,6 +26,3 @@ Return a list with an object of class unmarkedFitGD, a vector with IKA (Encounte
 \description{
 Estimate species density using gdistsamp function (package unmarked).
 }
-\examples{
-In progress
-}

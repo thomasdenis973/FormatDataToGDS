@@ -15,7 +15,7 @@
 #' Use CalculateSamplingEffort function to see sampling effort values per replicate.
 #' @export
 #'
-#' @examples In progess
+
 CreateFData <- function(species,number,preciselyCounted,distance,sample,subSample,order,samplingEffort){
 
   data <- data.frame(species=species,number=number,preciselyCounted=preciselyCounted,distance=distance,sample=sample,subSample=subSample,order=order,samplingEffort=samplingEffort)

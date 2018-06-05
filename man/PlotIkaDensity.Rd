@@ -19,6 +19,3 @@ Return a plot of estimated density (in x) and IKA (in x).
 Represent relatioship between IKA (i.e., Encounter rate, 10km walked length) and
 estimated density.
 }
-\examples{
-In progress
-}

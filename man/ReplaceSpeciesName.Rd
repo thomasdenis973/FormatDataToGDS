@@ -19,6 +19,3 @@ Return a vector of species names to replace species variable of dataframe create
 \description{
 Replace species names by other term
 }
-\examples{
-In progress
-}

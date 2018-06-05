@@ -11,7 +11,7 @@
 #'  a vector with abundance in km^{2} estimated by ranef function (package unmarked).
 #' @export
 #'
-#' @examples In progress
+
 SpeciesDensityEstimation <- function(data,modelGDS="NB",methodGDS="BFGS",keyfunGDS="halfnorm",...){
 
   ### inférence du modèle

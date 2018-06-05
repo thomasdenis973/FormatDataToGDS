@@ -26,7 +26,7 @@
 #' and an unmarkedFrameGDS object which can used in gdistsamp function (package unmarked).
 #' @export
 #'
-#' @examples In progress
+
 CreateFDataYGDS <- function(data, siteCovs=NULL, samplingEffort, nbReplicat=12, stripWidth=80, DistanceClass=5, unitsIn="m",survey="line", species="Cebus"
                            , groupNumber =TRUE, naRmNumber=FALSE, naRmDistance=FALSE, missingValuesNumber="mean", missingValuesDistance="mean", ...){
 

@@ -33,6 +33,3 @@ Use CalculateSamplingEffort function to see sampling effort values per replicate
 \description{
 Create FData object by formatting dataframe and adding replicate number according to samping effort.
 }
-\examples{
-In progess
-}
