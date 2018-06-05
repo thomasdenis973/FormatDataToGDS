@@ -1,0 +1,22 @@
+#' Observations of a monkey species across 29 sites in French Guiana.
+#'
+#' A dataset containing the observations of a monkey species recorded
+#' according to ONCFS sampling design. When a  See details below.
+#'
+#' @format A data frame with 707 rows and 8 variables:
+#' \describe{
+#'   \item{date}{date of the observation}
+#'   \item{number}{number of individual observed in the field}
+#'   \item{precisely_counted}{"oui", when the group size had been precisely counted. Otherwise, "non}
+#'   \item{distance}{perpendicular distance}
+#'   \item{effort}{distance walked on the subsample (e.g., a transect)}
+#'   \item{direction}{direction walked on the subsample}
+#'   \item{site}{site name}
+#'   \item{remarque}{"transect vide" significates that no species or individual was observed on the subsample.
+#'   In this case, a row was added with sampling effort (and also date, direction and site) to take into account
+#'   the "empty" subsample in the calculation of the sampling effort of the sample.
+#'   when }
+#'   ...
+#' }
+#' @source French Guianan ONCFS / Cécile Richard-Hansen
+"ONCFSData"
