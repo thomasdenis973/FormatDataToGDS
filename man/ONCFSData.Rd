@@ -27,6 +27,7 @@ ONCFSData
 }
 \description{
 A dataset containing the observations of a monkey species recorded
-according to ONCFS sampling design. When a  See details below.
+according to ONCFS sampling design. When no species or individual was observed on the subsample,
+  a row was added. See details below.
 }
 \keyword{datasets}
