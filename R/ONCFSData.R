@@ -1,7 +1,8 @@
 #' Observations of a monkey species across 29 sites in French Guiana.
 #'
 #' A dataset containing the observations of a monkey species recorded
-#' according to ONCFS sampling design. When a  See details below.
+#' according to ONCFS sampling design. When no species or individual was observed on the subsample,
+#'   a row was added. See details below.
 #'
 #' @format A data frame with 707 rows and 8 variables:
 #' \describe{
