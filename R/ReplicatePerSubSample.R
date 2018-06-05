@@ -7,6 +7,6 @@
 #'
 
 ReplicatePerSubSample <- function(data){
-  return(unlist(lapply(sapply(utils::unstack(data, data$replicateNumber~data$subSample), unique),length)))
+  return(unlist(lapply(sapply(utils::unstack(data, replicateNumber~subSample), unique),length)))
 }
 

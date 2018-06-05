@@ -8,7 +8,7 @@
 
 ObsNumberPerSpecies <- function(data){
   vSpeciesName <- unlist(lapply(levels(data$species),function(i) {
-    length(utils::unstack(data,data$number~data$species)[[i]])})
+    length(utils::unstack(data,number~species)[[i]])})
   )
   names(vSpeciesName) <- levels(data$species)
   return(vSpeciesName)

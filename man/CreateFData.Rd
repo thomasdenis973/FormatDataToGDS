@@ -2,7 +2,7 @@
 % Please edit documentation in R/CreateFData.R
 \name{CreateFData}
 \alias{CreateFData}
-\title{Create FData object by formatting dataframe and adding replicate number according to samping effort.}
+\title{Create FData object by formatting Data Frame and adding replicate number according to samping effort.}
 \usage{
 CreateFData(species, number, preciselyCounted, distance, sample, subSample,
   order, samplingEffort)
@@ -31,15 +31,18 @@ First replicate numbers have the highest sampling effort whereas the lastest are
 Use CalculateSamplingEffort function to see sampling effort values per replicate.
 }
 \description{
-Create FData object by formatting dataframe and adding replicate number according to samping effort.
+Create FData object by formatting Data Frame and adding replicate number according to samping effort.
 }
 \examples{
 data(ONCFSData)
+
 ONCFSData$order <- paste(ONCFSData$date,ONCFSData$sens,sep="_")
+
 FData <- CreateFData(species = ONCFSData$espece, number = ONCFSData$nombre,
 preciselyCounted = ONCFSData$precisementCompte,
 distance = ONCFSData$distance, sample = ONCFSData$site,
 subSample = ONCFSData$layon, order = ONCFSData$order,
 samplingEffort = ONCFSData$longueurLayon
 )
+
 }
