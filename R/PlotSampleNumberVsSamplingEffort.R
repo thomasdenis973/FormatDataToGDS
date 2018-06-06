@@ -13,7 +13,7 @@ PlotSampleNumberVsSamplingEffort <- function(data,seqReplicat){
   for(i in 1:length(seqReplicat))
   {
     vReplicatePerSubSample <-  ReplicatePerSubSample(data)
-    data2 <- data2[data2$subSample %in% names(vReplicatePerSubSample[vReplicatePerSubSample >= seqReplicat[i]]),]
+    data2 <- data[data$subSample %in% names(vReplicatePerSubSample[vReplicatePerSubSample >= seqReplicat[i]]),]
     data2 <- data2[data2$replicateNumber <= seqReplicat[i],]
     data2 <- gdata::drop.levels(data2)
     df[i,] <- c(length(unique(data2$sample)),sum(CalculateSamplingEffort(data2))/1000)
