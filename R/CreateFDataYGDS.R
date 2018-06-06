@@ -28,7 +28,7 @@
 #'
 
 CreateFDataYGDS <- function(data, siteCovs=NULL, samplingEffort, nbReplicat=12, stripWidth=80, DistanceClass=5, unitsIn="m",survey="line", species="Cebus"
-                           , groupNumber =TRUE, naRmNumber=FALSE, naRmDistance=FALSE, missingValuesNumber="mean", missingValuesDistance="mean", ...){
+                           , groupNumber =TRUE, naRmNumber=FALSE, naRmDistance=FALSE, missingValuesNumber="random", missingValuesDistance="random", ...){
 
   if(length(levels(data$sample)) != length(colnames(samplingEffort))){
     stop("le nom des sample de data et samplingEffort ne sont pas de la meme longueur")
