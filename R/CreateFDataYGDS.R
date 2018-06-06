@@ -27,7 +27,7 @@
 #' @export
 #'
 
-CreateFDataYGDS <- function(data, siteCovs=NULL, samplingEffort, nbReplicat=12, stripWidth=80, DistanceClass=5, unitsIn="m",survey="line", species="Cebus"
+CreateFDataYGDS <- function(data, siteCovs=NULL, samplingEffort, nbReplicat=12, stripWidth=80, DistanceClass=5, unitsIn="m",survey="line", species
                            , groupNumber =TRUE, naRmNumber=FALSE, naRmDistance=FALSE, missingValuesNumber="random", missingValuesDistance="random", ...){
 
   if(length(levels(data$sample)) != length(colnames(samplingEffort))){

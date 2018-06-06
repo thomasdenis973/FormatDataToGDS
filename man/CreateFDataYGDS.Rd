@@ -7,8 +7,8 @@
 CreateFDataYGDS(data, siteCovs = NULL, samplingEffort, nbReplicat = 12,
   stripWidth = 80, DistanceClass = 5, unitsIn = "m", survey = "line",
   species = "Cebus", groupNumber = TRUE, naRmNumber = FALSE,
-  naRmDistance = FALSE, missingValuesNumber = "mean",
-  missingValuesDistance = "mean", ...)
+  naRmDistance = FALSE, missingValuesNumber = "random",
+  missingValuesDistance = "random", ...)
 }
 \arguments{
 \item{data}{A FData object.}
