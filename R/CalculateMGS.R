@@ -13,18 +13,17 @@
 
 CalculateMGS <- function(data,species,threshold,sampleName,preciselyCountedValue){
   vector <- rep(NA,length(sampleName)) ###
-  data <- data[data$species == species,]
 
   for(i in sampleName)
   {
-
-    NumberI <- data[as.character(data$sample) == i & data$preciselyCounted == preciselyCountedValue,]$number
+    data2 <- data[data$species == species,]
+    NumberI <- data2[as.character(data2$sample) == i & data2$preciselyCounted == preciselyCountedValue,]$number
     vector[which(sampleName ==i)] <- if(length(NumberI) > threshold) {
 
       mean(NumberI,na.rm=TRUE)
 
     } else  {
-      mean(data$number,na.rm = TRUE)}
+      mean(data2[data2$preciselyCounted == preciselyCountedValue,]$number,na.rm = TRUE)}
   }
   names(vector) <- sampleName
   return(vector)
